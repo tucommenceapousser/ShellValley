@@ -1,100 +1,98 @@
+# ShellValley Reverse Shell Generator
+
+Le générateur de reverse shells ShellValley permet de créer des scripts de reverse shell dans divers langages de programmation et de les enregistrer pour une utilisation ultérieure. Ce projet prend en charge plusieurs types de shells, y compris Bash, Python, PHP, et bien d'autres.
+
 <h1 align="center">
  <a href="#"><img src="./img/shell_valley.png"></a>
- <br>
-  ShellValley
- <br>
-</h1> 
-<h4 align="center"><i>ShellValley</i> is a user-friendly reverse shell generator tool, specially designed for CTF players who prefer to stay within their terminal while generating reverse shells swiftly.</h4> 
 
-<p align="center">
- <a href="https://github.com/Nabil-Official">
-  <img src="https://madewithlove.vercel.app/bd?heart=true">
- </a>
- 
-</p>
+## Fonctionnalités
 
-<br>
+- Génération de reverse shells dans divers langages de programmation.
+- Enregistrement des reverse shells générés dans un répertoire spécifié.
+- Interface en ligne de commande (CLI) et interface graphique utilisateur (GUI) pour faciliter l'utilisation.
 
+## Installation
 
-### ► Installation
+1. Clonez le dépôt :
 
-```bash
-git clone https://github.com/Nabil-Official/ShellValley
-cd ShellValley
-python3 run.py -h
-```
-### ► usage
-```bash
-python3 run.py -s bash -p 4000 -i 127.0.0.1
-```
-### ► Supported reverse shells
-__default__: `bash`
+   ```bash
+   git clone https://github.com/tucommenceapousser/ShellValley.git
+   ```
 
-Reverse shells |
-|-|
-| bash |
-| php |
-| python |
-| python3 |
-| perl |
-| java |
-| javascript |
-| node |
-| netcat |
-| awk |
-| gawk |
-| telnet |
-| golang |
-| powershell |
-| tclsh |
-| ruby |
-| xterm |
-| ncat |
-| socket |
+2. Accédez au répertoire du projet :
 
-### ► Screenshots
+   ```bash
+   cd ShellValley
+   ```
 
-Screenshot 1             |  Screenshot 2
-:-----------------------:|:-----------------------:
-![Screenshot1](./img/s1.png)  |  ![Screenshot2](./img/s2.png)
+3. Assurez-vous que Python 3 est installé sur votre système. Installez les dépendances requises avec pip :
 
-### ► Disclaimer
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-***This tool is intended solely for testing and educational purposes, and its use is permissible only with explicit and proper consent. Under no circumstances should it be employed for illegal activities. Users must take full responsibility for adhering to all relevant local, state, and federal regulations. The developers disclaim any liability and cannot be held accountable for any inappropriate use or harm resulting from the utilization of this tool and software.***
+## Utilisation
 
-### ► Contact
-[![Mail Badge](https://img.shields.io/badge/-NABIL-c0392b?style=flat&labelColor=c0392b&logo=gmail&logoColor=white)](mailto:rjnabilrahman@gmail.com) [![Facebook Badge](https://img.shields.io/badge/-NabilRahman-1ca0f1?style=flat&labelColor=1ca0f1&logo=facebook&logoColor=white&link=[https://www.facebook.com/nabil.404](https://www.facebook.com/nabil.404))](https://www.facebook.com/nabil.404)
+### Interface en Ligne de Commande (CLI)
 
+Le script `generator.py` permet de générer des reverse shells et de les enregistrer dans un répertoire spécifié.
 
-
-### ► License
-***The usage of this project is governed by the GPLv3 License. Please consult the [LICENSE](LICENSE) file for complete information.***
-
-<br>
+#### Commandes de Base
 
 ```bash
- _____ _          _ _ _   _       _ _                                                
-/  ___| |        | | | | | |     | | |                                               
-\ `--.| |__   ___| | | | | | __ _| | | ___ _   _                                     
- `--. \ '_ \ / _ \ | | | | |/ _` | | |/ _ \ | | |                                    
-/\__/ / | | |  __/ | \ \_/ / (_| | | |  __/ |_| |                                    
-\____/|_| |_|\___|_|_|\___/ \__,_|_|_|\___|\__, |                                    
-                                            __/ | 1.0.0                              
- Nabil Rahman (github.com/Nabil-Official)  |___/                                     
-                                                                                     
-                                                                                     
-usage: run.py [-h] [-l] [-i LHOST] [-p PORT] [-s SHELL]                              
-                                                                                     
-=================== Help Center ====================                                 
-                                                                                     
-optional arguments:                                                                  
-  -h, --help            show this help message and exit                              
-  -l, --list            list of available shells (More shells will be added in the   
-                        future)                                                      
-  -i LHOST, --ip LHOST  specify IP address                                           
-  -p PORT, --port PORT  specify port                                                 
-  -s SHELL, --shell SHELL                                                            
-                        specify shell type  
-
+python3 runcli.py -i [IP] -p [PORT] -s [SHELL] -d [DIRECTORY]
 ```
-<br>
+
+- `-i`, `--ip` : Adresse IP à laquelle le reverse shell se connectera. (Obligatoire)
+- `-p`, `--port` : Port sur lequel le reverse shell se connectera. (Obligatoire)
+- `-s`, `--shell` : Type de shell à générer. Les options disponibles sont : `bash`, `php`, `python`, `perl`, `java`, `javascript`, `node`, etc. (Facultatif, par défaut `bash`)
+- `-d`, `--download` : Répertoire où enregistrer les scripts de reverse shell générés. (Facultatif)
+
+#### Exemples
+
+- **Générer un reverse shell en Bash et l'enregistrer dans un répertoire spécifique** :
+
+  ```bash
+  python3 runcli.py -i 192.168.1.100 -p 1234 -s bash -d /chemin/vers/repertoire
+  ```
+
+- **Générer un reverse shell en PHP et l'enregistrer dans un répertoire spécifique** :
+
+  ```bash
+  python3 runcli.py -i 192.168.1.100 -p 1234 -s php -d /chemin/vers/repertoire
+  ```
+
+- **Générer des reverse shells pour tous les types disponibles et les enregistrer dans un répertoire** :
+
+  ```bash
+  python3 runcli.py -i 192.168.1.100 -p 1234 -d /chemin/vers/repertoire
+  ```
+
+### Interface Graphique Utilisateur (GUI)
+
+Le script `rungui.py` fournit une interface graphique pour générer des reverse shells.
+
+#### Lancer l'Interface Graphique
+
+Assurez-vous que vous avez installé les dépendances requises, puis exécutez :
+
+```bash
+python3 rungui.py
+```
+
+L'interface graphique vous guidera à travers les étapes pour sélectionner le type de shell, entrer l'adresse IP et le port, et choisir un répertoire pour enregistrer les fichiers.
+
+### Options Avancées
+
+- **Lister les types de shells disponibles en CLI** :
+
+  ```bash
+  python3 runcli.py -l
+  ```
+
+  Cette commande affiche tous les types de shells disponibles pour la génération.
+
+this Mod'Z is made by Trhacknon from this repo:
+***https://github.com/Nabil-Official/ShellValley***
+
+Merci d'utiliser ShellValley ! 😊
