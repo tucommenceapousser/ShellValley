@@ -35,12 +35,12 @@ Le générateur de reverse shells ShellValley permet de créer des scripts de re
 
 ### Interface en Ligne de Commande (CLI)
 
-Le script `generator.py` permet de générer des reverse shells et de les enregistrer dans un répertoire spécifié.
+Le script `run.py` permet de générer des reverse shells et de les enregistrer dans un répertoire spécifié.
 
 #### Commandes de Base
 
 ```bash
-python3 runcli.py -i [IP] -p [PORT] -s [SHELL] -d [DIRECTORY]
+python3 run.py -i [IP] -p [PORT] -s [SHELL] -d [DIRECTORY]
 ```
 
 - `-i`, `--ip` : Adresse IP à laquelle le reverse shell se connectera. (Obligatoire)
@@ -53,19 +53,19 @@ python3 runcli.py -i [IP] -p [PORT] -s [SHELL] -d [DIRECTORY]
 - **Générer un reverse shell en Bash et l'enregistrer dans un répertoire spécifique** :
 
   ```bash
-  python3 runcli.py -i 192.168.1.100 -p 1234 -s bash -d /chemin/vers/repertoire
+  python3 run.py -i 192.168.1.100 -p 1234 -s bash -d /chemin/vers/repertoire
   ```
 
 - **Générer un reverse shell en PHP et l'enregistrer dans un répertoire spécifique** :
 
   ```bash
-  python3 runcli.py -i 192.168.1.100 -p 1234 -s php -d /chemin/vers/repertoire
+  python3 run.py -i 192.168.1.100 -p 1234 -s php -d /chemin/vers/repertoire
   ```
 
 - **Générer des reverse shells pour tous les types disponibles et les enregistrer dans un répertoire** :
 
   ```bash
-  python3 runcli.py -i 192.168.1.100 -p 1234 -d /chemin/vers/repertoire
+  python3 run.py -i 192.168.1.100 -p 1234 -d /chemin/vers/repertoire
   ```
 
 ### Interface Graphique Utilisateur (GUI)
@@ -77,7 +77,7 @@ Le script `rungui.py` fournit une interface graphique pour générer des reverse
 Assurez-vous que vous avez installé les dépendances requises, puis exécutez :
 
 ```bash
-python3 rungui.py
+python3 run.py
 ```
 
 L'interface graphique vous guidera à travers les étapes pour sélectionner le type de shell, entrer l'adresse IP et le port, et choisir un répertoire pour enregistrer les fichiers.
@@ -87,7 +87,7 @@ L'interface graphique vous guidera à travers les étapes pour sélectionner le 
 - **Lister les types de shells disponibles en CLI** :
 
   ```bash
-  python3 runcli.py -l
+  python3 run.py -l
   ```
 
   Cette commande affiche tous les types de shells disponibles pour la génération.
