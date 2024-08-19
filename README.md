@@ -4,6 +4,8 @@ Le générateur de reverse shells ShellValley permet de créer des scripts de re
 
 <h1 align="center">
  <a href="#"><img src="./img/shell_valley.png"></a>
+<h1 align="center">
+ <a href="#"><img src="./img/Screenshot_2024-08-19-17-04-10-960_com.android.chrome-edit.jpg"></a>
 
 ## Fonctionnalités
 
@@ -71,6 +73,10 @@ python3 run.py -i [IP] -p [PORT] -s [SHELL] -d [DIRECTORY]
 ### Interface Graphique Utilisateur (GUI)
 
 Le script `rungui.py` fournit une interface graphique pour générer des reverse shells.
+
+<a href="#"><img src="./img/Screenshot_2024-08-19-15-58-31-137_com.android.chrome-edit.jpg"></a>
+ <h1 align="center">
+ <a href="#"><img src="./img/Screenshot_2024-08-19-15-55-06-921_com.android.chrome-edit.jpg"></a>
 
 #### Lancer l'Interface Graphique
 
